@@ -6,4 +6,6 @@ data class RedditPost(
     val thumbnail: String?,
     val numComments: Int,
     val imageUrl: String?
-)
+){
+
+}
