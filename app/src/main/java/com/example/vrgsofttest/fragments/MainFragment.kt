@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import com.example.vrgsofttest.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -23,6 +24,7 @@ private val mainFragmentViewModel by viewModel<MainFragmentViewModel>()
         savedInstanceState: Bundle?
     ): View? {
         val view=inflater.inflate(R.layout.fragment_main, container, false)
+        val textView= view.findViewById<TextView>(R.id.textView)
         mainFragmentViewModel.redditPosts.observe(viewLifecycleOwner, Observer { posts ->
             for (post in posts) {
                 val author = post.author
@@ -34,6 +36,7 @@ private val mainFragmentViewModel by viewModel<MainFragmentViewModel>()
                 // Display the post information in the UI
                 // ...
             }
+
         })
         mainFragmentViewModel.fetchTopPost()
         return view
