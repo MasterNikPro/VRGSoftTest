@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/thumbnailImageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnailImageView"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/authorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_toRightOf="@id/thumbnailImageView"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:text="Author" />
+
+        <TextView
+            android:id="@+id/commentsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/authorTextView"
+            android:layout_toRightOf="@id/thumbnailImageView"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:text="5 comments" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentsTextView"
+            android:layout_toRightOf="@id/thumbnailImageView"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:text="2 hours ago" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
