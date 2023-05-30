@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vrgsofttest.R
 import com.example.vrgsofttest.data.RedditPost
@@ -54,6 +55,7 @@ class RecyclerViewAdapter(private val posts: List<RedditPost>) :
                             val outputStream = FileOutputStream(file)
                             bitmap?.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
                             outputStream.close()
+                            Toast.makeText(holder.itemView.context, "Download Success", Toast.LENGTH_SHORT).show()
 
                         } catch (e: Exception) {
                             e.printStackTrace()
@@ -72,6 +74,7 @@ class RecyclerViewAdapter(private val posts: List<RedditPost>) :
                 Picasso.get()
                     .load(imageUrl)
                     .into(target)
+
             }
         }
 
