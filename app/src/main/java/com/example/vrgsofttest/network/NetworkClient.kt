@@ -1,6 +1,5 @@
 package com.example.vrgsofttest.network
 
-import com.example.vrgsofttest.data.redditapi.RedditApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

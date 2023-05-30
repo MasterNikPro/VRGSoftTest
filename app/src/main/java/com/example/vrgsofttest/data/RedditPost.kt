@@ -5,7 +5,8 @@ data class RedditPost(
     val num_comments: Int,
     val thumbnail: String,
     val created_utc: Long,
-    val title: String
+    val title: String,
+    val is_video:Boolean,
 )
 data class RedditResponse(
     val data: RedditData
