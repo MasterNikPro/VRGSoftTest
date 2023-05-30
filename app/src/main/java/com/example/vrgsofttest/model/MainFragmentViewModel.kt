@@ -1,7 +1,5 @@
-package com.example.vrgsofttest.fragments
+package com.example.vrgsofttest.model
 
-import android.util.Log
-import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,8 +18,6 @@ class MainFragmentViewModel(private val getTopPostUseCase: GetTopPostUseCase): V
             try {
                 val posts = getTopPostUseCase.getData()
                 _redditPosts.value = posts
-                print(_redditPosts.value.toString())
-                Log.d("Lol",_redditPosts.value.toString())
             } catch (e: Exception) {
                 // Handle the exception
             }

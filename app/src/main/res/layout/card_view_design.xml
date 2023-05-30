@@ -17,7 +17,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:scaleType="centerCrop"
-            android:onClick="OpenLink"/>
+           />
 
         <TextView
             android:id="@+id/titleTextView"
@@ -63,14 +63,14 @@
             android:textSize="14sp" />
 
         <ImageView
-            android:id="@+id/openInBrowserButton"
+            android:id="@+id/downloadImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_open_in_browser" />
+            android:src="@drawable/ic_download" />
 
 
     </RelativeLayout>
